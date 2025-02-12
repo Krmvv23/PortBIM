@@ -1,0 +1,195 @@
+@import "./config.scss";
+
+.recently-news {
+    &-header {
+        h2 {
+            color: $light-color;
+        }
+
+        a {
+            transition: all .5s;
+
+            span,
+            svg {
+                color: $light-color;
+
+            }
+
+            &:hover {
+
+                span,
+                svg {
+                    color: $sky-color;
+                }
+            }
+        }
+    }
+
+    &-slider {
+        .slick-arrow {
+            top: 50% !important;
+            width: 40px;
+            height: 40px;
+            z-index: 2;
+            background-color: $light-color;
+            opacity: .8;
+
+            svg {
+                height: 100%;
+                width: 100%;
+                color: $dark-color;
+            }
+        }
+
+        .slick-next {
+            right: -20px;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .slick-prev {
+            left: -20px;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .slider-item {
+            padding: 0 5px;
+
+            &-background {
+                padding: 10px;
+                background-color: $dark-light-color;
+                border-radius: 10px;
+            }
+
+            &:hover {
+                .slider-item-img img {
+                    transform: scale(1.1);
+                }
+
+                .slider-item-body {
+                    &-date {
+                        span,svg{
+                            color: $sky-color;
+                        }
+                    }
+                    h3 {
+                        color: $sky-color;
+                    }
+                }
+
+                .slider-item-btn {
+                    color: $sky-color;
+
+                    span {
+                        color: $sky-color;
+
+                    }
+                }
+            }
+
+            &-body {
+                position: relative;
+
+                &-date {
+                    display: flex;
+                    align-items: center;
+
+                    span,
+                    svg {
+                        color: $light-color;
+                        font-size: 14px;
+                        transition: all .5s;
+
+                    }
+
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+
+                h3 {
+                    color: $light-color;
+                    transition: all .5s;
+                    font-size: 24px;
+                }
+            }
+
+            &-img {
+                overflow: hidden;
+                border-radius: 5px;
+                height: 165px;
+                width: 100%;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    transition: all .5s;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            &-btn {
+                color: $light-color;
+                // padding: 10px;
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    transition: all .5s;
+                    color: $light-color;
+                    font-size: 14px;
+                }
+                svg{
+                    transition: all .5s;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .recently-news {
+        &-slider {
+            .slider-item {
+                &-img {
+                    height: 140px;
+                }
+
+                &-body {
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    &-date {
+                        display: none;
+                    }
+                }
+
+                &-btn {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .recently-news {
+        &-slider {
+            .slider-item {
+
+                &-body h3 {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

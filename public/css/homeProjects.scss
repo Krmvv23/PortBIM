@@ -1,0 +1,153 @@
+@import "./config.scss";
+
+.home-projects {
+    &-header {
+        h2 {
+            color: $light-color;
+        }
+
+        a {
+            transition: all .5s;
+
+            span,
+            svg {
+                color: $light-color;
+
+            }
+
+            &:hover {
+
+                span,
+                svg {
+                    color: $sky-color;
+                }
+            }
+        }
+    }
+
+    &-top-slider {
+        .top-slider-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+
+            &-img {
+                padding-right: 0;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-body {
+                background-color: $sky-mid-color;
+                padding: 20px;
+                overflow-y: auto;
+                height: 100%;
+
+                h3 {
+                    color: #fff;
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-nav-slider {
+        .nav-slider-item {
+            padding: 15px;
+            overflow: hidden;
+            cursor: pointer;
+
+            &-img {
+                height: 150px;
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &-body {
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background-color: rgb(16 98 95 / 74%);
+
+                p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .home-projects {
+        &-top-slider {
+            .top-slider-item {
+
+                &-body {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 70%;
+                    background-color: rgb(16 98 95 / 74%);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .home-projects {
+        &-top-slider {
+            .top-slider-item {
+                height: 350px;
+            }
+        }
+
+        &-nav-slider {
+            .nav-slider-item {
+                &-img {
+                    height: 110px;
+                }
+                &-body p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .home-projects {
+        &-top-slider {
+            .top-slider-item {
+                height: 300px;
+                &-body {
+                    width: 100%;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
